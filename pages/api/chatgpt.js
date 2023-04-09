@@ -8,7 +8,7 @@ const openai = new OpenAIApi(configuration);
 export default async function handler(req, res) {
   console.log("go handler ");
   if (req.method === "POST") {
-    const messages = req.body.text;
+    const messages = req.body.text.join();
     console.log("messages ", messages);
     try {
       const response = await openai.createChatCompletion({
@@ -16,12 +16,12 @@ export default async function handler(req, res) {
         messages: [
           {
             role: "system",
-            content: "Can you correct my mistakes while we chat?",
+            content: "Can you correct my mistakes while we chat, without including capitalization, commas, or periods?",
           },
           { role: "user", content: messages },
         ],
         temperature: 0.9,
-        max_tokens: 100,
+        max_tokens: 1024,
       });
 
       const chatGPTResponseText = response.data.choices[0].message?.content;

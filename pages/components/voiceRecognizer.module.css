@@ -67,6 +67,22 @@
   color: white;
 }
 
+.default-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.interim-transcript-area {
+  width: 60%;
+  line-height: 32px;
+}
+
+.horizontal-bar {
+  width: 60%;
+  height: 0;
+  border: 1px solid gray;
+}
+
 .spinner {
   /* position: absolute; */
   top: 50%;
