@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SpeakerSelector from "./SpeakerSelector";
-import useSpeechRecognition from "../hooks/useSpeechRecognition";
+import useSpeechRecognition from "../../hooks/useSpeechRecognition";
 import styles from "./voiceRecognizer.module.css";
 import classnames from 'classnames';
 
