@@ -8,18 +8,11 @@ const openai = new OpenAIApi(configuration);
 export default async function handler(req, res) {
   console.log("go handler ");
   if (req.method === "POST") {
-    const messages = req.body.text.join();
-    console.log("messages ", messages);
+    const messages = req.body.text;
     try {
       const response = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
-        messages: [
-          {
-            role: "system",
-            content: "Can you correct my mistakes while we chat, without including capitalization, commas, or periods?",
-          },
-          { role: "user", content: messages },
-        ],
+        messages: messages,
         temperature: 0.9,
         max_tokens: 1024,
       });

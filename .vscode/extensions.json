@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "vscode-icons-team.vscode-icons",
+    "syler.sass-indented",
+    "oderwat.indent-rainbow",
+    "streetsidesoftware.code-spell-checker",
+    "visualstudioexptteam.vscodeintellicode",
+    "esbenp.prettier-vscode"
+  ]
+}
