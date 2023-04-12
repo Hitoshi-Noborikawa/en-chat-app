@@ -66,7 +66,8 @@ const VoiceRecognizer = () => {
         { role: "assistant", content: responseText },
       ]);
     } catch (err) {
-      <Error />;
+      // <Error />;
+      console.error(err);
     }
   };
 
