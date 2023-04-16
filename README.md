@@ -1,4 +1,4 @@
-＃ 英語でChatGPTとチャットできる簡単なサンプルです。
+英語でChatGPTとチャットできる簡単なサンプルです。
 
 https://en-chat-app-8fvi.vercel.app/
 
